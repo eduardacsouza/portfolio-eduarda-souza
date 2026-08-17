@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #faf8ff;
+  color: #2d2640;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(250, 248, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(120, 80, 200, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7a7095;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #5a4d7a;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: rgba(120, 80, 200, 0.1);
+  color: #7c3aed;
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sobre - Starry/sparkle background */
+.section-sobre {
+  text-align: center;
+  padding-bottom: 4rem;
+  background-color: #faf8ff;
+  overflow: hidden;
+}
+
+.section-sobre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(3px 3px at 10% 20%, rgba(124, 58, 237, 0.5) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 25% 45%, rgba(168, 85, 247, 0.45) 0%, transparent 100%),
+    radial-gradient(3px 3px at 40% 15%, rgba(99, 102, 241, 0.5) 0%, transparent 100%),
+    radial-gradient(2px 2px at 55% 70%, rgba(124, 58, 237, 0.4) 0%, transparent 100%),
+    radial-gradient(3px 3px at 70% 30%, rgba(168, 85, 247, 0.5) 0%, transparent 100%),
+    radial-gradient(3.5px 3.5px at 85% 55%, rgba(99, 102, 241, 0.45) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 15% 75%, rgba(124, 58, 237, 0.4) 0%, transparent 100%),
+    radial-gradient(3px 3px at 90% 10%, rgba(168, 85, 247, 0.5) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 30% 85%, rgba(99, 102, 241, 0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 60% 50%, rgba(124, 58, 237, 0.45) 0%, transparent 100%),
+    radial-gradient(3px 3px at 5% 50%, rgba(168, 85, 247, 0.5) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 48% 35%, rgba(99, 102, 241, 0.4) 0%, transparent 100%),
+    radial-gradient(3.5px 3.5px at 75% 80%, rgba(124, 58, 237, 0.45) 0%, transparent 100%),
+    radial-gradient(2px 2px at 20% 60%, rgba(168, 85, 247, 0.35) 0%, transparent 100%),
+    radial-gradient(3px 3px at 95% 75%, rgba(99, 102, 241, 0.4) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 35% 5%, rgba(124, 58, 237, 0.5) 0%, transparent 100%),
+    radial-gradient(3px 3px at 65% 90%, rgba(168, 85, 247, 0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 80% 15%, rgba(99, 102, 241, 0.45) 0%, transparent 100%),
+    radial-gradient(3px 3px at 50% 95%, rgba(124, 58, 237, 0.35) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 12% 40%, rgba(168, 85, 247, 0.5) 0%, transparent 100%),
+    radial-gradient(2px 2px at 42% 62%, rgba(99, 102, 241, 0.4) 0%, transparent 100%),
+    radial-gradient(3px 3px at 58% 8%, rgba(124, 58, 237, 0.5) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 88% 42%, rgba(168, 85, 247, 0.45) 0%, transparent 100%),
+    radial-gradient(2px 2px at 3% 88%, rgba(99, 102, 241, 0.4) 0%, transparent 100%),
+    radial-gradient(3px 3px at 72% 65%, rgba(124, 58, 237, 0.45) 0%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 37% 52%, rgba(168, 85, 247, 0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 92% 88%, rgba(99, 102, 241, 0.5) 0%, transparent 100%),
+    radial-gradient(3px 3px at 18% 12%, rgba(124, 58, 237, 0.45) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-sobre .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-sobre h1 {
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+  color: #2d2640;
+}
+
+.highlight {
+  color: #7c3aed;
+}
+
+.caveat {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: #5b21b6;
+}
+
+.descricao {
+  font-size: 1.8rem;
+  color: #5a4d7a;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btn-contato {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 0.5rem 4rem;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+}
+
+.btn-contato:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(124, 58, 237, 0.4);
+}
+
+/* Wave divider */
+.wave-divider {
+  line-height: 0;
+  background-color: #f3efff;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 120px;
+  display: block;
+}
+
+/* Projetos */
+.section-projetos {
+  align-items: flex-start;
+  padding-top: 4rem;
+  background-color: #FFF;
+  min-height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Formas decorativas */
+.formas-decorativas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.forma {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.forma-1 {
+  top: 5%;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(124, 58, 237, 0.15);
+}
+
+.forma-2 {
+  bottom: 15%;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 80%);
+}
+
+.forma-3 {
+  top: 40%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  border: 1.5px solid rgba(168, 85, 247, 0.12);
+}
+
+.forma-4 {
+  bottom: 5%;
+  right: 15%;
+  width: 80px;
+  height: 80px;
+  background: rgba(124, 58, 237, 0.06);
+  border-radius: 50%;
+}
+
+.forma-5 {
+  top: 20%;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(168, 85, 247, 0.12);
+}
+
+.forma-6 {
+  top: 60%;
+  left: 8%;
+  width: 100px;
+  height: 100px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 50%;
+}
+
+.section-projetos .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #2d2640;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #5a4d7a;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(124, 58, 237, 0.15);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.projeto-item {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projeto-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #2d2640;
+}
+
+.projeto-img-container {
+  margin-bottom: 1rem;
+}
+
+.projeto-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.projeto-galeria {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.projeto-galeria img {
+  height: 400px;
+  width: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.projeto-galeria::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projeto-galeria::-webkit-scrollbar-track {
+  background: #e4daf5;
+  border-radius: 3px;
+}
+
+.projeto-galeria::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 3px;
+}
+
+.projeto-descricao {
+  font-size: 1rem;
+  color: #5a4d7a;
+  margin: 0 auto;
+}
+
+.link-destaque {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link-destaque:hover {
+  color: #5b21b6;
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f6ff;
+  border-top: 1px solid rgba(124, 58, 237, 0.1);
+  color: #5a4d7a;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .section {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .section-sobre h1 {
+    font-size: 2.2rem;
+  }
+
+  .descricao {
+    font-size: 1.1rem;
+    gap: 1rem;
+  }
+
+  .btn-contato {
+    padding: 0.5rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .projeto-titulo {
+    font-size: 1.2rem;
+  }
+
+  .projeto-descricao {
+    font-size: 0.9rem;
+  }
+
+  .projeto-galeria img {
+    height: auto;
+    max-height: 300px;
+    width: 90vw;
+    object-fit: contain;
+  }
+}
