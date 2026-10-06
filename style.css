@@ -413,8 +413,8 @@ body {
 
   .projeto-galeria img {
     height: auto;
-    max-height: 300px;
-    width: 90vw;
+    max-height: 220px;
+    width: 95vw;
     object-fit: contain;
   }
 }
